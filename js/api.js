@@ -28,7 +28,7 @@ async function fetchTMDBMovies(query) {
 
 // Fetches additional movie data (like ratings) from the OMDb API.
 async function fetchOMDBData(title) {
-    const url = `http://www.omdbapi.com/?t=${encodeURIComponent(title)}&apikey=${OMDB_API_KEY}`;
+    const url = `https://www.omdbapi.com/?t=${encodeURIComponent(title)}&apikey=${OMDB_API_KEY}`;
     return await fetchAndHandle(url, 'OMDB API request failed');
 }
 
